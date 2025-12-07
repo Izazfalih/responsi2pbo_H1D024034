@@ -1,0 +1,16 @@
+Setelah anda menyelesaikan kode, tolong jawab pertanyaan dibawah ini ya =
+
+
+1. Apa tujuan utama adanya interface dalam pemrograman berorientasi objek, dan bagaimana interface membantu menciptakan kontrak perilaku?
+2. Mengapa interface dapat memiliki banyak implementasi, dan apa makna konseptual dari kemampuan tersebut dalam desain sistem?
+3. Apa perbedaan mendasar antara extends dan implements dalam konteks interface, jika dilihat secara konsep tanpa melihat contoh kode?
+4. Apa alasan diperkenalkannya default method dalam interface, dan bagaimana fitur ini memengaruhi keberlangsungan (compatibility) suatu sistem yang sudah berjalan?
+5. Bagaimana konsep multiple interface memperluas fleksibilitas desain tanpa menimbulkan masalah kompleksitas yang biasa muncul pada multiple inheritance?
+
+Jawab
+1. Tujuan utamanya adalah Abstraksi Murni dan Standarisasi. Interface menciptakan "kontrak perilaku" dengan menetapkan metode apa saja yang harus ada, tanpa mendikte bagaimana cara kerjanya. Artinya, setiap class yang mengimplementasikan interface tersebut terikat janji (kontrak) untuk menyediakan fungsi yang sama, menjamin konsistensi meskipun objeknya berbeda-beda.
+2. Karena interface hanya berisi deklarasi (judul method) tanpa tubuh program, sehingga detail teknisnya diserahkan sepenuhnya kepada class pengimplementasi. Secara konseptual, ini bermakna Fleksibilitas (Loose Coupling); sistem tidak bergantung pada objek tertentu, melainkan pada "kemampuan" objek tersebut.
+3. Extends (Pewarisan Sifat/Genetik): Hubungan "Adalah Seorang..." (Is-A). Class Anak mewarisi kode yang sudah jadi, variabel, dan logika dari Bapaknya. Sifatnya hierarkis dan vertikal.
+   Implements (Realisasi Kemampuan/Sertifikasi): Hubungan "Mampu Melakukan..." (Can-Do). Class memenuhi syarat atau kontrak kerja tertentu. Class harus menulis kodenya sendiri dari nol untuk memenuhi janji tersebut. Sifatnya fungsional dan horizontal.
+4. Alasannya adalah untuk menjaga Backward Compatibility (Kompatibilitas dengan versi lama). Fitur ini memungkinkan kita menambahkan method baru ke dalam interface lama tanpa merusak/membuat error seluruh class yang sudah terlanjur mengimplementasikan interface tersebut.
+5. Konsep ini memperluas fleksibilitas dengan mengizinkan satu objek memiliki banyak peran (misal: satu orang bisa jadi Programmer sekaligus Karyawan). Hal ini tidak menimbulkan masalah kompleksitas (seperti Diamond Problem pada multiple inheritance class) karena interface tidak mewarisi state (variabel penyimpan nilai) yang berpotensi konflik, melainkan hanya mewarisi daftar kewajiban perilaku.

@@ -1,0 +1,15 @@
+Pertanyaan Refleksi
+Setelah menyelesaikan kode, jawab pertanyaan berikut:
+
+1. Apa itu abstract class dan Kenapa kita membutuhkan Abstarct class?
+2. Apa perbedaan utama antara abstract class dan class biasa dalam pemrograman berorientasi objek? 
+3. Mengapa subclass wajib mengimplementasikan semua abstract method dari parent class?
+4. Mengapa abstract method tidak boleh memiliki isi implementasi di dalam abstract class?
+5. Bagaimana abstract class dapat mendukung konsep polimorfisme, dan mengapa objek yang direferensikan melalui tipe abstract class tetap dapat menjalankan perilaku berbeda pada masing-masing subclass?
+Jawab
+1. Abstract Class adalah sebuah class yang tidak dapat dibuat objeknya (diinstansiasi) secara langsung dan berfungsi sebagai kerangka dasar bagi class lain.
+2. Instansiasi: Class biasa bisa dibuat objeknya menggunakan new, sedangkan Abstract Class tidak bisa dibuat objeknya secara langsung.
+    Method: Abstract Class boleh memiliki abstract method (method tanpa isi/body), sedangkan class biasa semua method-nya wajib memiliki isi yang lengkap.
+3. Karena abstract method bertindak sebagai "hutang" atau kontrak yang harus dilunasi. Parent class hanya mendefinisikan apa yang harus dilakukan (nama method), sedangkan Subclass bertanggung jawab mendefinisikan bagaimana caranya (isi method).
+4. Karena tujuan abstract method hanyalah memberikan definisi konsep, bukan implementasi teknis. Implementasi detailnya dibiarkan kosong karena setiap subclass pasti memiliki cara kerja yang sangat berbeda (contoh: cara menyalakan mesin Pesawat Tempur pasti beda total dengan Kapal Eksplorasi).
+5. Abstract class mendukung polimorfisme dengan berperan sebagai wadah umum (tipe referensi) yang bisa menyimpan berbagai jenis objek subclass. Melalui mekanisme Dynamic Dispatch (Late Binding), meskipun tipe datanya adalah Parent (Abstract), Java akan mengeksekusi method override milik objek aslinya (Subclass) saat program berjalan.
